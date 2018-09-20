@@ -11,16 +11,21 @@
     <textarea id="editor1" class="form-control" name="body" placeholder="Add Body"></textarea>
   </div>
   <div class="form-group">
-  	<label>Category</label>
-  	<select name="category_id" class="form-control">
+  	<div class="col-md-2">
+      <label>Category</label>
+  	 <select name="category_id" class="form-control" >
 	  	<?php foreach($categories as $category): ?>
 	  		<option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
 	  	<?php endforeach; ?>	
-  	</select>
+  	 </select>
+    </div>
   </div>
-  <div class="form-group">
-  	<label>Upload Image</label>
-  	<input type="file" name="userfile" size="20">
+  <div class="col-md-8 col-mdoffset-8">
+    <div class="form-group">
+  	   <label>Upload Image</label>
+  	   <input type="file" name="userfile" size="20">
+    </div>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-default">Submit Post</button>
+  </div>
 </form>
