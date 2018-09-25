@@ -25,3 +25,7 @@ a.pagination-link{
 	background: #f4f4f4;
 	border: 1px #ccc solid;
 }
+.cat-delete{
+	display:inline;
+}
+

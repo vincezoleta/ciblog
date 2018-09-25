@@ -1,6 +1,6 @@
 <h2><?php echo $post['title'];?></h2>
 <small class="post-date">Posted on: <?php echo $post['created _at']; ?></small></br>
-<img src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>">
+<center><img src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']; ?>">
 <div class="post-body">
 	<?php echo $post['body']; ?>
 </div>
@@ -9,11 +9,11 @@
 	<hr>
 	<a class="btn btn-warning pull-left" href="<?php echo base_url();?>posts/edit/<?php echo $post['slug']; ?>">Edit</a> 
 	<?php echo form_open('/posts/delete/'.$post['id']); ?>
-		<input type="submit" value="Delete" class="btn btn-danger">
+		<input type="submit" value="Delete" class="btn btn-danger pull-left">
 	</form>
-<?php endif; ?>
+<?php endif; ?><br>
 <hr>
-<h3>Comments</h3>
+</center><h3>Comments</h3>
 <?php if($comments) :?>
 	<?php foreach ($comments as $comment) : ?>	
 		<div class="well">
@@ -22,12 +22,14 @@
 	<?php endforeach; ?>
 <?php else : ?>
 	<p>No Comments to Display</p>
-
+</center>
 <?php endif; ?>
 <hr>
+<div class=container >
 <h3>Add Comment</h3>
 <?php echo validation_errors(); ?>
 <?php echo form_open('comments/create/'.$post['id']); ?>
+<div class='col-md-4'>
 	<div class="form-group">
 		<label>Name</label>
 		<input type="text" name="name" class="form-control">
@@ -42,5 +44,6 @@
 	</div>
 	<input type="hidden" name="slug" value="<?php echo $post['slug']; ?>">
 	<button class="btn btn-primary" type="submit">Submit</button>
+	</div>
 </form>
 

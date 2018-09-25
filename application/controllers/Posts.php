@@ -84,7 +84,7 @@
 			$this->post_model->delete_post($id);
 
 			//Set message
-				$this->session->set_flashdata('post_deleted', 'Your has been deleted');
+				$this->session->set_flashdata('post_deleted', 'Your post has been deleted');
 
 			redirect('posts');
 

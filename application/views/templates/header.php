@@ -1,7 +1,7 @@
 <html>
 		<head>
 			<!-- <?php echo base_url(); ?> -->
-			<title>ciBlog</title>
+			<title>Info Board</title>
 			<link rel="stylesheet"  type="text/css" href="<?php echo base_url(); ?>assets/bootstrap/bootstrap.min.css">
 			<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
 			<script type="text/javascript" src="http://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
@@ -10,7 +10,7 @@
 		<nav class="navbar navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">ciBlog</a>
+					<a class="navbar-brand" href="/">Info Board</a>
 				</div>
 				<div id="navbar">
 					<ul class="nav navbar-nav">
@@ -41,7 +41,7 @@
 			<?php endif; ?>
 
 			<?php if($this->session->flashdata('post_created')): ?>
-				<?php echo '<p class="alert alert-sucess">'.$this->session->flashdata('post_created').'</p>'; ?>
+				<?php echo '<p class="alert alert-success">'.$this->session->flashdata('post_created').'</p>'; ?>
 			<?php endif; ?>
 
 			<?php if($this->session->flashdata('post_updated')): ?>
@@ -53,7 +53,7 @@
 			<?php endif; ?>
 
 			<?php if($this->session->flashdata('post_deleted')): ?>
-				<?php echo '<p class="alert alert-sucess">'.$this->session->flashdata('post_deleted').'</p>'; ?>
+				<?php echo '<p class="alert alert-success">'.$this->session->flashdata('post_deleted').'</p>'; ?>
 			<?php endif; ?>
 
 			<?php if($this->session->flashdata('login_failed')): ?>
@@ -66,4 +66,8 @@
 
 			<?php if($this->session->flashdata('logout_successful')): ?>
 				<?php echo '<p class="alert alert-success">'.$this->session->flashdata('logout_successful').'</p>'; ?>
+			<?php endif; ?>
+
+			<?php if($this->session->flashdata('category_deleted')): ?>
+				<?php echo '<p class="alert alert-success">'.$this->session->flashdata('category_deleted').'</p>'; ?>
 			<?php endif; ?>
